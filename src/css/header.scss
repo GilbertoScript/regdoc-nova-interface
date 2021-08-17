@@ -1,0 +1,110 @@
+header {
+    height: 80px;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+
+    nav.navbar {
+        padding: .5rem 0;
+
+         ul.navbar-nav {
+            margin-left: 1rem;
+        }
+
+        ul.navbar-nav>li.nav-item {
+            padding: 0 .25rem;
+        }
+
+        ul.navbar-nav>li.nav-item>a.nav-link {
+            border-radius: .42rem;
+            color: #FFF;
+            padding: .75rem 1.25rem;
+        }
+    }
+}
+
+header nav.navbar 
+header nav.navbar ul.navbar-nav>li.nav-item>a.nav-link.disabled {
+    color: rgba(255, 255, 255, .8);
+}
+header nav.navbar ul.navbar-nav>li.nav-item.active>a.nav-link,
+header nav.navbar ul.navbar-nav>li.nav-item>a.nav-link:hover {
+    background-color: rgba(255, 255, 255, .1);
+}
+header nav.navbar div.user button {
+    font-size: 14px;
+    padding: .3rem .4rem;
+}
+header nav.navbar div.user button::after {
+    display: none;
+}
+header nav.navbar div.user button:hover {
+    background-color: rgba(255, 255, 255, .2);
+}
+header nav.navbar div.user button>span.initial {
+    background-color: rgba(255, 255, 255, .2);
+    border-radius: .42rem;
+    height: 35px;
+    line-height: 35px;
+    width: 35px;
+}
+
+div#sub-header {
+    height: 150px;
+}
+div#sub-header ol.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+}
+div#sub-header ol.breadcrumb>li.breadcrumb-item {
+    color: #FFF;
+}
+div#sub-header ol.breadcrumb>li.breadcrumb-item>a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+}
+div#sub-header ol.breadcrumb>li.breadcrumb-item + li.breadcrumb-item::before {
+    color: #FFF;
+}
+div#sub-header div.signature a {
+    color: #FFF;
+    display: inline-block;
+    line-height: 1.1;
+    text-decoration: none;
+}
+
+/* btn initial */
+span.initial.text-white {
+    background-color: rgba(255, 255, 255, .2);
+    border-radius: .42rem;
+    height: 35px;
+    line-height: 35px;
+    width: 35px;
+}
+
+#btn-contas::after {
+    display: none;
+}
+
+// `xs` returns only a ruleset and no media query
+// ... { ... }
+
+// `sm` applies to x-small devices (portrait phones, less than 576px)
+// @media (max-width: 575.98px) {
+
+// }
+
+// `md` applies to small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+    .navbar-collapse {
+
+        background-color: #004d7c;
+    }
+}
+
+// // `lg` applies to medium devices (tablets, less than 992px)
+// @media (max-width: 991.98px) { ... }
+
+// // `xl` applies to large devices (desktops, less than 1200px)
+// @media (max-width: 1199.98px) { ... }
+
+// // `xxl` applies to x-large devices (large desktops, less than 1400px)
+// @media (max-width: 1399.98px) { ... }

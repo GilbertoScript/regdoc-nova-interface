@@ -1,0 +1,41 @@
+- Demanda: Desenvolvedor nova interface
+
+--- Descrição: Desenvolver nova interface administrativa para o REGDOC, que funcione com o menu lateral esquerdo.
+
+--- Regras:
+
+- O template deverá utilizar as seguintes cores principais:
+
+#004d7c
+
+#003656
+
+Os menus devem ser divididos em:
+
+º Início
+
+º Produtos
+
+-- Registro fiduciário
+
+-- Registro de garantias / contratos
+
+-- e-Doc
+
+º Relatórios
+
+-- Registro fiduciário
+
+-- Registro de garantias / contratos
+
+-- e-Doc
+
+-- Logs de Usuário
+
+º Configurações
+
+-- Usuários
+
+-- Entidades / Empresas
+
+-- Emissão de certificados
