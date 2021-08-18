@@ -1,5 +1,8 @@
+.container {
+    max-width: 1140px;
+}
+
 header {
-    height: 80px;
     border-bottom: 1px solid rgba(255, 255, 255, .1);
 
     nav.navbar {
@@ -18,57 +21,72 @@ header {
             color: #FFF;
             padding: .75rem 1.25rem;
         }
+
+        ul.navbar-nav>li.nav-item>a.nav-link.disabled {
+            color: rgba(255, 255, 255, .8);
+        }
+
+        div.user button {
+            font-size: 14px;
+            padding: .3rem .4rem;
+        }
+
+        div.user button::after {
+            display: none;
+        }
+
+        div.user button:hover {
+            background-color: rgba(255, 255, 255, .2);
+        }
+
+        div.user button>span.initial {
+            background-color: rgba(255, 255, 255, .2);
+            border-radius: .42rem;
+            height: 35px;
+            line-height: 35px;
+            width: 35px;
+        }
     }
 }
 
-header nav.navbar 
-header nav.navbar ul.navbar-nav>li.nav-item>a.nav-link.disabled {
-    color: rgba(255, 255, 255, .8);
-}
 header nav.navbar ul.navbar-nav>li.nav-item.active>a.nav-link,
 header nav.navbar ul.navbar-nav>li.nav-item>a.nav-link:hover {
     background-color: rgba(255, 255, 255, .1);
 }
-header nav.navbar div.user button {
-    font-size: 14px;
-    padding: .3rem .4rem;
-}
-header nav.navbar div.user button::after {
-    display: none;
-}
-header nav.navbar div.user button:hover {
-    background-color: rgba(255, 255, 255, .2);
-}
-header nav.navbar div.user button>span.initial {
-    background-color: rgba(255, 255, 255, .2);
-    border-radius: .42rem;
-    height: 35px;
-    line-height: 35px;
-    width: 35px;
-}
 
+
+/* Subheader */
 div#sub-header {
     height: 150px;
-}
-div#sub-header ol.breadcrumb {
-    background-color: transparent;
-    padding: 0;
-}
-div#sub-header ol.breadcrumb>li.breadcrumb-item {
-    color: #FFF;
-}
-div#sub-header ol.breadcrumb>li.breadcrumb-item>a {
-    color: rgba(255, 255, 255, 0.7);
-    text-decoration: none;
-}
-div#sub-header ol.breadcrumb>li.breadcrumb-item + li.breadcrumb-item::before {
-    color: #FFF;
-}
-div#sub-header div.signature a {
-    color: #FFF;
-    display: inline-block;
-    line-height: 1.1;
-    text-decoration: none;
+
+    ol.breadcrumb {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    ol.breadcrumb>li.breadcrumb-item {
+        color: #FFF;
+    }
+
+    ol.breadcrumb>li.breadcrumb-item>a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+    }
+
+    ol.breadcrumb>li.breadcrumb-item + li.breadcrumb-item::before {
+        color: #FFF;
+    }
+
+    div.signature a {
+        color: #FFF;
+        display: inline-block;
+        line-height: 1.1;
+        text-decoration: none;
+    }
+
+    .breadcrumb-item + .breadcrumb-item::before {
+        content: "•";
+    }
 }
 
 /* btn initial */
@@ -80,9 +98,17 @@ span.initial.text-white {
     width: 35px;
 }
 
-#btn-contas::after {
-    display: none;
+#btn-contas {
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    &::after {
+        display: none;
+    }
 }
+
 
 // `xs` returns only a ruleset and no media query
 // ... { ... }

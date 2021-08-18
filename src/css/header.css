@@ -1,5 +1,9 @@
+@charset "UTF-8";
+.container {
+  max-width: 1140px;
+}
+
 header {
-  height: 80px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 header nav.navbar {
@@ -16,29 +20,19 @@ header nav.navbar ul.navbar-nav > li.nav-item > a.nav-link {
   color: #FFF;
   padding: 0.75rem 1.25rem;
 }
-
-header nav.navbar header nav.navbar ul.navbar-nav > li.nav-item > a.nav-link.disabled {
+header nav.navbar ul.navbar-nav > li.nav-item > a.nav-link.disabled {
   color: rgba(255, 255, 255, 0.8);
 }
-
-header nav.navbar ul.navbar-nav > li.nav-item.active > a.nav-link,
-header nav.navbar ul.navbar-nav > li.nav-item > a.nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
 header nav.navbar div.user button {
   font-size: 14px;
   padding: 0.3rem 0.4rem;
 }
-
 header nav.navbar div.user button::after {
   display: none;
 }
-
 header nav.navbar div.user button:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
-
 header nav.navbar div.user button > span.initial {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 0.42rem;
@@ -47,33 +41,37 @@ header nav.navbar div.user button > span.initial {
   width: 35px;
 }
 
+header nav.navbar ul.navbar-nav > li.nav-item.active > a.nav-link,
+header nav.navbar ul.navbar-nav > li.nav-item > a.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Subheader */
 div#sub-header {
   height: 150px;
 }
-
 div#sub-header ol.breadcrumb {
   background-color: transparent;
   padding: 0;
 }
-
 div#sub-header ol.breadcrumb > li.breadcrumb-item {
   color: #FFF;
 }
-
 div#sub-header ol.breadcrumb > li.breadcrumb-item > a {
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
 }
-
 div#sub-header ol.breadcrumb > li.breadcrumb-item + li.breadcrumb-item::before {
   color: #FFF;
 }
-
 div#sub-header div.signature a {
   color: #FFF;
   display: inline-block;
   line-height: 1.1;
   text-decoration: none;
+}
+div#sub-header .breadcrumb-item + .breadcrumb-item::before {
+  content: "•";
 }
 
 /* btn initial */
@@ -85,6 +83,9 @@ span.initial.text-white {
   width: 35px;
 }
 
+#btn-contas:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
 #btn-contas::after {
   display: none;
 }
