@@ -8,8 +8,12 @@ header {
     nav.navbar {
         padding: .5rem 0;
 
-         ul.navbar-nav {
+        ul.navbar-nav {
             margin-left: 1rem;
+
+            ul.dropdown-menu li {
+                margin: .5rem;
+            }
         }
 
         ul.navbar-nav>li.nav-item {
@@ -24,6 +28,14 @@ header {
 
         ul.navbar-nav>li.nav-item>a.nav-link.disabled {
             color: rgba(255, 255, 255, .8);
+        }
+
+        div.user .dropdown-menu {
+            width: 100%;
+
+            .dropdown-item {
+                margin: .5rem 0;
+            }
         }
 
         div.user button {
@@ -58,6 +70,13 @@ header nav.navbar ul.navbar-nav>li.nav-item>a.nav-link:hover {
 /* Subheader */
 div#sub-header {
     height: 150px;
+
+    .dropdown-menu {
+
+        .dropdown-item {
+            padding: 1rem;
+        }
+    }
 
     ol.breadcrumb {
         background-color: transparent;

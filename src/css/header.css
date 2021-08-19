@@ -12,6 +12,9 @@ header nav.navbar {
 header nav.navbar ul.navbar-nav {
   margin-left: 1rem;
 }
+header nav.navbar ul.navbar-nav ul.dropdown-menu li {
+  margin: 0.5rem;
+}
 header nav.navbar ul.navbar-nav > li.nav-item {
   padding: 0 0.25rem;
 }
@@ -22,6 +25,12 @@ header nav.navbar ul.navbar-nav > li.nav-item > a.nav-link {
 }
 header nav.navbar ul.navbar-nav > li.nav-item > a.nav-link.disabled {
   color: rgba(255, 255, 255, 0.8);
+}
+header nav.navbar div.user .dropdown-menu {
+  width: 100%;
+}
+header nav.navbar div.user .dropdown-menu .dropdown-item {
+  margin: 0.5rem 0;
 }
 header nav.navbar div.user button {
   font-size: 14px;
@@ -49,6 +58,9 @@ header nav.navbar ul.navbar-nav > li.nav-item > a.nav-link:hover {
 /* Subheader */
 div#sub-header {
   height: 150px;
+}
+div#sub-header .dropdown-menu .dropdown-item {
+  padding: 1rem;
 }
 div#sub-header ol.breadcrumb {
   background-color: transparent;

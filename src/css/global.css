@@ -19,3 +19,14 @@ body {
     background-color: #005ca9;
     border-color: #005ca9;
 }
+
+.container.mt-4 div div.buttons button,
+.container.mt-4 div div.buttons a {
+    font-size: .85rem;
+}
+
+table td.options a,
+table td.options div.btn-group button,
+div.row .col input {
+    font-size: .85rem;
+}
