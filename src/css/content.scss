@@ -19,6 +19,7 @@ div.card.box-app {
 
         .sub-title {
             color: #9999a3 !important;
+            font-size: 1.1rem;
         }
     }
 
@@ -85,11 +86,16 @@ div.card.box-app {
     }
 }
 
+.collapse-partes {
 
-
-.seta-partes {
-    margin-left: 7rem;
+    button.btn-block {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
 }
+
+
 
 div.card.box-app>table th:first-child,
 div.card.box-app>table td:first-child {
@@ -109,9 +115,30 @@ div.card.box-app ul.nav>li.nav-item>a:focus {
     border-bottom: 3px solid #004d7c;
 }
 
+/* Table */
+table.table td div.parte+div.parte {
+    border-top: 1px solid #545454;
+    margin-top: 5px;
+    padding-top: 5px;
+}
+
+table.table td div.parte>span.ellipsis {
+    max-width: 100%;
+}
+
+.ellipsis {
+	display:-webkit-box;
+	cursor:pointer;
+	max-width:45%;
+	overflow:hidden;
+	text-overflow:ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
 
 
 /* Alertas */
+
 /* Alertas iniciais */
 div.alertas a.alerta {
 	background:white;
@@ -136,9 +163,9 @@ div.alertas a.alerta {
     }
 
     >span.badge {
-        border-radius:0;
+        border-radius: 0 0 0 10px;
         display:block;
-        padding:.5rem .55rem;
+        padding: .5rem 1rem;
         position:absolute;
         top:0;
         right:0;

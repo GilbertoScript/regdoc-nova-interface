@@ -3,7 +3,13 @@
 }
 
 header {
+
     border-bottom: 1px solid rgba(255, 255, 255, .1);
+
+    .container {
+        height: 80px;
+        padding-top: 9px;
+    }
 
     nav.navbar {
         padding: .5rem 0;
@@ -32,6 +38,7 @@ header {
 
         div.user .dropdown-menu {
             width: 100%;
+            padding: .5rem;
 
             .dropdown-item {
                 margin: .5rem 0;
@@ -128,14 +135,7 @@ span.initial.text-white {
     }
 }
 
-
-// `xs` returns only a ruleset and no media query
-// ... { ... }
-
-// `sm` applies to x-small devices (portrait phones, less than 576px)
-// @media (max-width: 575.98px) {
-
-// }
+/** Media querys **/
 
 // `md` applies to small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
@@ -144,12 +144,3 @@ span.initial.text-white {
         background-color: #004d7c;
     }
 }
-
-// // `lg` applies to medium devices (tablets, less than 992px)
-// @media (max-width: 991.98px) { ... }
-
-// // `xl` applies to large devices (desktops, less than 1200px)
-// @media (max-width: 1199.98px) { ... }
-
-// // `xxl` applies to x-large devices (large desktops, less than 1400px)
-// @media (max-width: 1399.98px) { ... }

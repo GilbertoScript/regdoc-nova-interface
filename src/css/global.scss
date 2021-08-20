@@ -15,6 +15,10 @@ body {
 }
 
 /* Botões */
+button {
+    font-size: .85rem !important;
+}
+
 .btn-primary {
     background-color: #005ca9;
     border-color: #005ca9;
@@ -29,4 +33,25 @@ table td.options a,
 table td.options div.btn-group button,
 div.row .col input {
     font-size: .85rem;
+}
+
+/* Badges */
+table tbody tr td span.bg-primary {
+    background-color: #005ca9 !important;
+}
+
+/* Footer */
+footer {
+
+    div.container {
+
+        a.text-decoration-none {
+            color: black;
+            transition: .85s;
+
+            &:hover {
+                color: #004d7c;
+            }
+        }
+    }
 }
