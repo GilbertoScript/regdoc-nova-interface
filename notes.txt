@@ -39,3 +39,6 @@ Os menus devem ser divididos em:
 -- Entidades / Empresas
 
 -- Emissão de certificados
+
+;Botões dropdown - talvez precisem usar essa nova configuração
+; data-bs-toggle="dropdown" aria-expanded="false">
