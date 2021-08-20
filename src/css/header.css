@@ -111,7 +111,7 @@ span.initial.text-white {
 @media (max-width: 767.98px) {
   .navbar-collapse {
     background-color: #004d7c;
-    z-index: 999;
+    z-index: 2;
     border: 1px solid darkgray;
   }
 }
