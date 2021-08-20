@@ -152,7 +152,7 @@ div.alertas a.alerta {
     text-align:center;
     text-decoration:none;
 
-    transition: .9s;
+    transition: .4s;
 
     &:hover {
         color: black;
@@ -163,7 +163,7 @@ div.alertas a.alerta {
     }
 
     >span.badge {
-        border-radius: 0 0 0 10px;
+        border-radius: 0 0 0 12px;
         display:block;
         padding: .5rem 1rem;
         position:absolute;
@@ -177,6 +177,6 @@ div.alertas a.alerta {
         font-size:3rem;
         margin-bottom:.5rem;
         padding:1rem 1.5rem;
-        transition: .9s;
+        transition: .4s;
     }
 }

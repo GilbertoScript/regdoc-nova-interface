@@ -20,20 +20,20 @@ header {
             ul.dropdown-menu li {
                 margin: .5rem;
             }
-        }
 
-        ul.navbar-nav>li.nav-item {
-            padding: 0 .25rem;
-        }
+            >li.nav-item {
+                padding: 0 .25rem;
+            }
 
-        ul.navbar-nav>li.nav-item>a.nav-link {
-            border-radius: .42rem;
-            color: #FFF;
-            padding: .75rem 1.25rem;
-        }
+            >li.nav-item>a.nav-link {
+                border-radius: .42rem;
+                color: #FFF;
+                padding: .75rem 1.25rem;
+            }
 
-        ul.navbar-nav>li.nav-item>a.nav-link.disabled {
-            color: rgba(255, 255, 255, .8);
+            >li.nav-item>a.nav-link.disabled {
+                color: rgba(255, 255, 255, .8);
+            }
         }
 
         div.user .dropdown-menu {
@@ -142,5 +142,7 @@ span.initial.text-white {
     .navbar-collapse {
 
         background-color: #004d7c;
+        z-index: 999;
+        border: 1px solid darkgray;
     }
 }

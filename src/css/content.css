@@ -129,7 +129,7 @@ div.alertas a.alerta {
   position: relative;
   text-align: center;
   text-decoration: none;
-  transition: 0.9s;
+  transition: 0.4s;
 }
 div.alertas a.alerta:hover {
   color: black;
@@ -138,7 +138,7 @@ div.alertas a.alerta:hover > i {
   border-color: black;
 }
 div.alertas a.alerta > span.badge {
-  border-radius: 0 0 0 10px;
+  border-radius: 0 0 0 12px;
   display: block;
   padding: 0.5rem 1rem;
   position: absolute;
@@ -151,7 +151,7 @@ div.alertas a.alerta > i {
   font-size: 3rem;
   margin-bottom: 0.5rem;
   padding: 1rem 1.5rem;
-  transition: 0.9s;
+  transition: 0.4s;
 }
 
 /*# sourceMappingURL=content.css.map */
