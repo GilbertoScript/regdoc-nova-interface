@@ -1,32 +1,35 @@
+@charset "UTF-8";
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-	background: #eef0f8;
-    background-image: url('../../assets/img/regdoc.jpg');
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: 100% 350px;
-    font-family: 'Poppins', sans-serif;
-    font-size: .835rem;
+  background: #eef0f8;
+  background-image: url("../../assets/img/regdoc.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% 350px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.835rem;
 }
 
 /* Botões */
 .btn-primary {
-    background-color: #005ca9;
-    border-color: #005ca9;
+  background-color: #005ca9;
+  border-color: #005ca9;
 }
 
 .container.mt-4 div div.buttons button,
 .container.mt-4 div div.buttons a {
-    font-size: .85rem;
+  font-size: 0.85rem;
 }
 
 table td.options a,
 table td.options div.btn-group button,
 div.row .col input {
-    font-size: .85rem;
+  font-size: 0.85rem;
 }
+
+/*# sourceMappingURL=global.css.map */
