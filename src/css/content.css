@@ -18,6 +18,7 @@ div.card.box-app > div.card-header h3 {
 }
 div.card.box-app > div.card-header .sub-title {
   color: #9999a3 !important;
+  font-size: 1.1rem;
 }
 div.card.box-app > div.card-header div.card-subtitle {
   font-size: 0.9rem;
@@ -69,8 +70,10 @@ div.card.box-app td {
   vertical-align: middle;
 }
 
-.seta-partes {
-  margin-left: 7rem;
+.collapse-partes button.btn-block {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 div.card.box-app > table th:first-child,
@@ -90,6 +93,27 @@ div.card.box-app ul.nav > li.nav-item > a:hover,
 div.card.box-app ul.nav > li.nav-item > a:focus {
   color: #004d7c;
   border-bottom: 3px solid #004d7c;
+}
+
+/* Table */
+table.table td div.parte + div.parte {
+  border-top: 1px solid #545454;
+  margin-top: 5px;
+  padding-top: 5px;
+}
+
+table.table td div.parte > span.ellipsis {
+  max-width: 100%;
+}
+
+.ellipsis {
+  display: -webkit-box;
+  cursor: pointer;
+  max-width: 45%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 
 /* Alertas */
@@ -114,9 +138,9 @@ div.alertas a.alerta:hover > i {
   border-color: black;
 }
 div.alertas a.alerta > span.badge {
-  border-radius: 0;
+  border-radius: 0 0 0 10px;
   display: block;
-  padding: 0.5rem 0.55rem;
+  padding: 0.5rem 1rem;
   position: absolute;
   top: 0;
   right: 0;

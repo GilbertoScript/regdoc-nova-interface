@@ -6,6 +6,10 @@
 header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+header .container {
+  height: 80px;
+  padding-top: 9px;
+}
 header nav.navbar {
   padding: 0.5rem 0;
 }
@@ -28,6 +32,7 @@ header nav.navbar ul.navbar-nav > li.nav-item > a.nav-link.disabled {
 }
 header nav.navbar div.user .dropdown-menu {
   width: 100%;
+  padding: 0.5rem;
 }
 header nav.navbar div.user .dropdown-menu .dropdown-item {
   margin: 0.5rem 0;
@@ -102,6 +107,7 @@ span.initial.text-white {
   display: none;
 }
 
+/** Media querys **/
 @media (max-width: 767.98px) {
   .navbar-collapse {
     background-color: #004d7c;
