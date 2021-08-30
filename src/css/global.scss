@@ -40,6 +40,24 @@ table tbody tr td span.bg-primary {
     background-color: #005ca9 !important;
 }
 
+aside a {
+    color: #3f4254 !important;
+    text-decoration: none;
+
+    &:hover {
+        color: #0d6efd !important;
+    }
+}
+.nav-item .active,
+a:active {
+    color: white !important;
+    text-decoration: none !important;
+
+    &:hover {
+        color: white !important;
+    }
+}
+
 /* Footer */
 footer {
 

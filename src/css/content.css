@@ -1,3 +1,4 @@
+@charset "UTF-8";
 div.card.box-app {
   background-color: #FFF;
   border: none;
@@ -152,6 +153,26 @@ div.alertas a.alerta > i {
   margin-bottom: 0.5rem;
   padding: 1rem 1.5rem;
   transition: 0.4s;
+}
+
+/* Tabs */
+#pills-tabContent div.h-100 {
+  padding: 1.5rem 2rem 0 2rem !important;
+}
+
+/* Formulário */
+.form-control {
+  font-size: 0.9rem;
+}
+
+.form-control.form-control-solid {
+  background-color: #ebeff2;
+  border-color: #ebeff2;
+  color: #3f4254;
+  -webkit-transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, -webkit-box-shadow 0.15s ease;
 }
 
 /*# sourceMappingURL=content.css.map */

@@ -179,3 +179,24 @@ div.alertas a.alerta {
         transition: .4s;
     }
 }
+
+
+
+/* Tabs */
+#pills-tabContent div.h-100 {
+    padding: 1.5rem 2rem 0 2rem !important;
+}
+
+/* Formulário */
+.form-control {
+    font-size: .9rem;
+}
+.form-control.form-control-solid {
+    background-color: #ebeff2;
+    border-color: #ebeff2;
+    color: #3f4254;
+    -webkit-transition: color .15s ease,background-color .15s ease,border-color .15s ease,-webkit-box-shadow .15s ease;
+    transition: color .15s ease,background-color .15s ease,border-color .15s ease,-webkit-box-shadow .15s ease;
+    transition: color .15s ease,background-color .15s ease,border-color .15s ease,box-shadow .15s ease;
+    transition: color .15s ease,background-color .15s ease,border-color .15s ease,box-shadow .15s ease,-webkit-box-shadow .15s ease;
+}
