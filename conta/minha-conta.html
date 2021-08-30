@@ -20,6 +20,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
+	
+	<!-- Fontawesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
 	<title>REGDOC - Minha conta</title>
 </head>
@@ -143,6 +146,19 @@
 		<div class="row h-100 align-items-center">
 			<div class="col-9">
 				<h3>Minha conta</h3>
+
+				<!-- Breadcrumb -->
+				<ol class="breadcrumb">
+
+					<li class="breadcrumb-item">
+						<a href="../index.html">Início</a>
+					</li>
+
+					<li class="breadcrumb-item active">Minha conta</li>
+
+
+					<!-- / Breadcrumb -->
+				</ol>
 			</div>
 			<div class="col-3 d-flex justify-content-end">
 
@@ -156,7 +172,7 @@
 							<span class="text-white m-1">
 								<i class="bi bi-people-fill"></i>
 							</span>
-							<span class="text-white fw-bold mr-2">BANCO ATENA</span>
+							<span class="text-white fw-bold me-2">BANCO ATENA</span>
 							<span>&nbsp;&nbsp;&nbsp;</span>
 							<span class="initial text-white">B</span>
 	
@@ -179,387 +195,497 @@
 
 <!-- Conteúdo -->
 <div class="container mt-4">
-	<div class="card card-content box-app">
-		<div class="card-header">
-			<h3 class="mb-1">Minha conta</h3>
-		</div>
-		
-		<div id="minha-conta" class="card-body box-app">
-			<div class="row">
+	<div class="d-flex flex-column flex-md-row">
 
-				<div class="col-3">
+		<!-- Aside - menu minha conta -->
+		<aside class="flex-row-auto bg-white col-12 col-md-3 card border-white pb-3 pb-md-0 p-0 mb-4 mb-md-0">
+			<div class="card-body card-account p-4 navbar navbar-expand-md navbar-light flex-md-column">
 
-					<!-- Minha conta - links laterais -->
-					<div class="nav flex-column nav-pills">
-						<a class="nav-link active show" id="nav-dadospessoais-tab" data-toggle="pill" href="#nav-dadospessoais">
-							Dados Pessoais
-						</a>
+				<div class="d-flex justify-content-between w-100 d-md-block">
 
-						<a class="nav-link" id="nav-dadosacesso-tab" data-toggle="pill" href="#nav-dadosacesso">
-							Dados de Acesso
-						</a>
-
-						<a class="nav-link" id="nav-api-tab" data-toggle="pill" href="#nav-api">
-							API
-						</a>
-
-						<a class="nav-link" id="nav-seguranca-tab" data-toggle="pill" href="#nav-seguranca">
-							Segurança
-						</a>
+					<div class="d-flex align-items-center">
+						<div>
+							<!-- Nome do usuário -->
+							<a href="#" class="h4 text-dark-75">
+								Banco Atena
+							</a>
+							<div class="text-muted mt-1">Seja bem vindo!</div>
+						</div>
 					</div>
+
+					<!-- Ícone menu responsivo -->
+					<button 
+						class="navbar-toggler" 
+						type="button" 
+						data-toggle="collapse" 
+						data-bs-toggle="collapse" 
+						data-target="#pills-tab"
+						data-bs-target="#pills-tab" 
+						aria-controls="pills-tab" 
+						aria-expanded="false" 
+						aria-label="Menu mobile"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
 
 				</div>
 
-				<div class="col-9">
-					<div class="tab-content pt-0">
+				<hr class="d-none d-md-block w-100">
 
-						<div class="tab-pane fade active show pb-3" id="nav-dadospessoais">
-							<form name="form-dados-pessoais" method="post" action="">
-								<fieldset>
-									<legend>DADOS PRINCIPAIS</legend>
-									<div class="card card-body">
-										<div class="form-group">
-											<div class="alert alert-info mb-0">
-												<div class="custom-control custom-radio custom-control-inline">
-													<input type="radio" name="tp_pessoa" id="tp_pessoa_f" class="custom-control-input" value="F">
-													<label class="custom-control-label" for="tp_pessoa_f">
-														CPF
-													</label>
-												</div>
-												<div class="custom-control custom-radio custom-control-inline">
-													<input type="radio" name="tp_pessoa" id="tp_pessoa_j" class="custom-control-input" value="J" checked="">
-													<label class="custom-control-label" for="tp_pessoa_j">
-														CNPJ
-													</label>
-												</div>
-											</div>
-										</div>
-										<div class="pessoa-fisica mt-2" style="display: none;">
-											<div class="form-group">
-												<div class="row">
-													<div class="col-3">
-														<label class="control-label">CPF</label>
-														<input class="form-control cpf" name="nu_cpf_cnpj_pf" disabled="">
-													</div>
-													<div class="col-4">
-														<label class="control-label">Nome</label>
-														<input class="form-control" name="no_pessoa_pf" maxlength="80" value="Banco Atena" disabled="">
-													</div>
-													<div class="col-3">
-														<label class="control-label">Gênero</label>
-														<select class="form-control" name="tp_sexo" disabled="">
-															<option value="">Selecione o gênero</option>
-															<option value="F">Feminino</option>
-															<option value="M">Masculino</option>
-														</select>
-													</div>
-													<div class="col-2">
-														<label class="control-label">Data de nasc.</label>
-														<input type="text" class="form-control data data_mask" name="dt_nascimento" value="" disabled="">
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="pessoa-juridica mt-2">
-											<div class="form-group">
-												<div class="row">
-													<div class="col-6">
-														<label class="control-label">CNPJ</label>
-														<input class="form-control cnpj" name="nu_cpf_cnpj_pj" value="49967161000">
-													</div>
-													<div class="col-6">
-														<label class="control-label">Razão Social</label>
-														<input class="form-control" name="no_pessoa_pj" maxlength="80" value="Banco Atena">
-													</div>
-												</div>
-											</div>
-											<div class="form-group mt-2">
-												<div class="row">
-													<div class="col-6">
-														<label class="control-label">Inscrição municipal</label>
-														<input type="text" class="form-control" name="nu_inscricao_municipal" value="">
-													</div>
-													<div class="col">
-														<label class="control-label">Nome fantasia</label>
-														<input type="text" class="form-control" name="no_fantasia" value="Banco Atena">
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</fieldset>
-								<fieldset class="mt-2">
-									<legend>TELEFONE</legend>
-									<div class="card card-body">
-										<div class="form-group">
-											<div class="row">
-												<div class="col">
-													<div class="alert alert-info mb-0">
-														<div class="custom-control custom-checkbox">
-															<input type="checkbox" name="in_digitar_telefone" id="in_digitar_telefone_pessoais" class="custom-control-input" value="S" checked="">
-															<label class="custom-control-label" for="in_digitar_telefone_pessoais">
-																Desejo digitar o meu telefone
-															</label>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div id="campos-telefone" class="form-group mt-2">
-											<div class="row">
-												<div class="col-5">
-													<label class="control-label">Tipo de telefone</label>
-													<select class="form-control" name="id_tipo_telefone">
-														<option value="">Tipo de telefone</option>
-														<option value="1">Residencial</option>
-														<option value="2" selected="">Comercial</option>
-														<option value="3">Celular</option>
-													</select>
-												</div>
-												<div class="col">
-													<label class="control-label">DDD</label>
-													<input type="text" class="form-control ddd" name="nu_ddd" value="61 ">
-												</div>
-												<div class="col">
-													<label class="control-label">Número do telefone</label>
-													<input type="text" class="form-control telefone" name="nu_telefone" value="32235848  ">
-												</div>
-											</div>
-										</div>
-									</div>
-								</fieldset>
-								<fieldset class="mt-2">
-									<legend>ENDEREÇO</legend>
-									<div class="card card-body">
-										<div class="form-group">
-											<div class="row">
-												<div class="col">
-													<div class="alert alert-info mb-0">
-														<div class="custom-control custom-checkbox">
-															<input type="checkbox" name="in_digitar_endereco" id="in_digitar_endereco_pessoais" class="custom-control-input" value="S" checked="">
-															<label class="custom-control-label" for="in_digitar_endereco_pessoais">
-																Desejo digitar o meu endereço
-															</label>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
+				<ul id="pills-tab" class="
+						nav collapse navbar-collapse nav-bold nav-hover nav-active nav-link-rounded nav-pills mt-3 mt-md-0 flex-grow-0
+					" role="tablist">
 
-										<div id="campos-endereco" class="form-group mt-2">
-											<div class="row">
-												<div class="col-3">
-													<label class="control-label">CEP</label>
-													<input class="form-control cep" name="nu_cep" value="70092900">
-												</div>
-												<div class="col-7">
-													<label class="control-label">Endereço</label>
-													<input type="text" class="form-control" name="no_endereco" value="SBS QUADRA 4 BLOCO A LOTE">
-												</div>
-												<div class="col">
-													<label class="control-label">Número</label>
-													<input type="text" class="form-control" name="nu_endereco" value="3/4">
-												</div>
-											</div>
-											<div class="row">
-												<div class="col-6">
-													<label class="control-label">Bairro</label>
-													<input class="form-control" name="no_bairro" value="ASA SUL">
-												</div>
-												<div class="col">
-													<label class="control-label">Complemento</label>
-													<input type="text" class="form-control" name="no_complemento" value="PRESI/GECOL 21 ANDAR">
-												</div>
-											</div>
-											<div class="row">
-												<div class="col-6">
-													<label class="control-label">Estados</label>
-													<select class="form-control" name="id_estado">
-														<option value="">Selecione o estado</option>
-														<option value="1" data-uf="AC">Acre</option>
-														<option value="2" data-uf="AL">Alagoas</option>
-														<option value="4" data-uf="AP">Amapá</option>
-														<option value="3" data-uf="AM">Amazonas</option>
-														<option value="5" data-uf="BA">Bahia</option>
-														<option value="6" data-uf="CE">Ceará</option>
-														<option value="7" data-uf="DF" selected="">Distrito Federal</option>
-														<option value="8" data-uf="ES">Espírito Santo</option>
-														<option value="9" data-uf="GO">Goiás</option>
-														<option value="10" data-uf="MA">Maranhão</option>
-														<option value="13" data-uf="MT">Mato Grosso</option>
-														<option value="12" data-uf="MS">Mato Grosso do Sul</option>
-														<option value="11" data-uf="MG">Minas Gerais</option>
-														<option value="14" data-uf="PA">Pará</option>
-														<option value="15" data-uf="PB">Paraíba</option>
-														<option value="18" data-uf="PR">Paraná</option>
-														<option value="16" data-uf="PE">Pernambuco</option>
-														<option value="17" data-uf="PI">Piauí</option>
-														<option value="19" data-uf="RJ">Rio de Janeiro</option>
-														<option value="20" data-uf="RN">Rio Grande do Norte</option>
-														<option value="23" data-uf="RS">Rio Grande do Sul</option>
-														<option value="21" data-uf="RO">Rondônia</option>
-														<option value="22" data-uf="RR">Roraima</option>
-														<option value="24" data-uf="SC">Santa Catarina</option>
-														<option value="26" data-uf="SP">São Paulo</option>
-														<option value="25" data-uf="SE">Sergipe</option>
-														<option value="27" data-uf="TO">Tocantins</option>
-													</select>
-												</div>
-												<div class="col">
-													<label class="control-label">Cidade</label>
-													<select class="form-control" name="id_cidade">
-														<option value="">Selecione uma cidade</option>
-														<option value="882" selected="">Brasília</option>
-													</select>
-												</div>
-											</div>
-										</div>
-									</div>
-								</fieldset>
-								<div class="form-group mt-3">
-									<div class="row">
-										<div class="col">
-											<input type="reset" class="btn btn-danger float-left" value="Cancelar">
-											<input type="submit" class="btn btn-success float-right" value="Salvar dados pessoais">
-										</div>
-									</div>
-								</div>
-							</form>
+					<!-- Itens do menu -->
+					<li class="nav-item mb-2 w-100" role="presentation">
+						<a 
+							id="nav-dados-pessoais-tab" 
+							class="nav-link py-3 active" 
+							href="#nav-dados-pessoais" 
+							data-toggle="pill"
+							data-bs-toggle="pill"
+							role="tab" 
+							aria-controls="nav-dados-pessoais"
+							aria-selected="true"
+						>
+							<span class="nav-icon me-2">
+								<i class="fas fa-user" aria-hidden="true"></i>
+							</span>
+							<span class="nav-text font-size-lg">Dados pessoais</span>
+						</a>
+					</li>
+					<li class="nav-item mb-2 w-100" role="presentation">
+						<a 
+							id="nav-dados-acesso-tab" 
+							class="nav-link py-3" 
+							href="#nav-dados-acesso" 
+							data-toggle="pill"
+							data-bs-toggle="pill"
+							role="tab" 
+							aria-controls="nav-dados-acesso"
+							aria-selected="false"
+						>
+							<span class="nav-icon me-2">
+								<i class="fas fa-key" aria-hidden="true"></i>
+							</span>
+							<span class="nav-text font-size-lg">Dados de acesso</span>
+						</a>
+					</li>
+
+					<li class="nav-item mb-2 w-100" role="presentation">
+						<a 
+							id="nav-api-tab" 
+							class="nav-link py-3" 
+							href="#nav-api" 
+							data-toggle="pill" 
+							role="tab" 
+							aria-controls="nav-api"
+							data-bs-toggle="pill"
+						>
+							<span class="nav-icon me-2">
+								<i class="fas fa-laptop-code"></i>
+							</span>
+							<span class="nav-text font-size-lg">API</span>
+						</a>
+					</li>
+
+					<li class="nav-item mb-2 w-100" role="presentation">
+						<a 
+							id="nav-seguranca-tab" 
+							class="nav-link py-3" 
+							href="#nav-seguranca" 
+							data-toggle="pill" 
+							data-bs-toggle="pill"
+							role="tab" 
+							aria-controls="nav-seguranca" 
+						>
+							<span class="nav-icon me-2">
+								<i class="fas fa-shield-alt" aria-hidden="true"></i>
+							</span>
+							<span class="nav-text font-size-lg">Segurança da conta</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</aside>
+
+		<!-- Conteúdo -->
+		<div id="div-conteudo" class="flex-row-fluid ms-0 ms-md-5 col-12 col-md-9">
+
+			<div class="tab-content" id="pills-tabContent">
+
+				<!-- Card dados pessoais -->
+				<div id="nav-dados-pessoais" class="h-100 card card-custom card-stretch card-data tab-pane fade show active border-white" role="tabpanel" aria-labelledby="nav-dados-pessoais-tab">
+					<!-- Header -->
+					<div class="card-header text-md-left flex-column flex-md-row d-flex justify-content-between p-0 bg-white">
+
+						<div class="card-title align-items-start flex-column">
+							<h4 class="card-label text-dark">Dados pessoais</h4>
+							<span class="text-muted fw-bold font-size-sm mt-1">
+								Atualize suas informações pessoais
+							</span>
 						</div>
 
-						<div class="tab-pane fade pb-3" id="nav-dadosacesso">
-							<form name="form-dados-acesso" method="post" action="">
-								<fieldset>
-									<legend>DADOS DE ACESSO</legend>
-									<div class="card card-body">
-										<div class="form-group">
-											<div class="form-group">
-												<div class="row">
-													<div class="col">
-														<label class="control-label">E-mail</label>
-														<input type="text" name="email_usuario" class="form-control" value="banco.atena@validhub.com.br" disabled="">
-													</div>
-												</div>
-											</div>
-											<div class="form-group mt-2">
-												<div class="row">
-													<div class="col">
-														<label class="control-label">Senha atual</label>
-														<input type="password" name="senha_atual" class="form-control">
-													</div>
-												</div>
-											</div>
-											<div class="form-group mt-2">
-												<div class="row">
-													<div class="col">
-														<label class="control-label">Nova senha</label>
-														<input type="password" name="nova_senha" class="form-control">
-													</div>
-												</div>
-											</div>
-											<div class="form-group mt-2">
-												<div class="row">
-													<div class="col">
-														<label class="control-label">Confirme a nova a senha</label>
-														<input type="password" name="repetir_nova_senha" class="form-control">
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</fieldset>
-								<div class="form-group mt-3">
-									<div class="row">
-										<div class="col">
-											<input type="reset" class="btn btn-danger float-left" value="Cancelar">
-											<input type="submit" class="btn btn-success float-right" value="Salvar dados de acesso">
-										</div>
+						<div class="card-toolbar">
+							<button type="submit" class="btn btn-success me-2 px-5 p-2 px-md-3 disabled" disabled="disabled">
+								Salvar dados pessoais
+							</button>
+							<button type="submit" class="btn btn-secondary px-5 p-2 px-md-3 mt-2 mt-md-0 disabled" disabled="disabled">
+								Cancelar
+							</button>
+						</div>
+					</div>
+					<!-- / Header -->
+
+					<!-- Form -> inputs -->
+					<form class="form">
+						<div class="card-body">
+
+
+							<div class="border-bottom">
+
+								<div class="row">
+									<div class="col-12">
+										<h6 class="mt-3 mb-3">Dados principais</h6>
 									</div>
 								</div>
-							</form>
+
+								<div class="form-group row mb-3">
+									<label class="col-12 col-md-3 col-form-label">CPF</label>
+									<div class="col-12 col-md-9">
+										<input class="form-control form-control-solid" type="text" value="220.834.300-00">
+									</div>
+								</div>
+
+								<div class="form-group row mb-3">
+									<label class="col-12 col-md-3 col-form-label">Nome</label>
+									<div class="col-12 col-md-9">
+										<input class="form-control form-control-solid" type="text" value="John Doe">
+									</div>
+								</div>
+
+								<div class="form-group row mb-3">
+									<label class="col-12 col-md-3 col-form-label">Genêro</label>
+									<div class="col-12 col-md-9">
+										<select class="form-select form-control form-control-solid" aria-label=".form-select-sm example">
+											<option selected>Selecione o gênero</option>
+											<option value="1">Masculino</option>
+											<option value="2">Feminino</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group row mb-3">
+									<label class="col-12 col-md-3 col-form-label">Data de nascimento</label>
+									<div class="col-12 col-md-9">
+										<input type="date" class="form-control data data_mask form-control form-control-solid" name="dt_nascimento" value="">
+									</div>
+								</div>
+							</div>
+
+							<div class="border-bottom">
+							
+   
+								<div class="row">
+									<div class="col-12">
+										<h6 class="mt-3 mb-3">Telefone</h6>
+									</div>
+								</div>
+
+								<div class="form-group row mb-3">
+									<label class="col-12 col-md-3 col-form-label">Tipo do telefone</label>
+									<div class="col-12 col-md-9">
+										<select class="form-select form-select-sm form-control form-control-solid" aria-label=".form-select-sm example">
+											<option selected>Tipo do telefone</option>
+											<option value="1">Comercial</option>
+											<option value="2">Residencial</option>
+											<option value="3">Celular</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group row mb-3">
+									<label class="col-12 col-md-3 col-form-label">DDD</label>
+									<div class="col-12 col-md-9">
+										<input class="form-control form-control-solid" type="number" value="61">
+									</div>
+								</div>
+
+								<div class="form-group row mb-3">
+									<label class="col-12 col-md-3 col-form-label">Número do telefone</label>
+									<div class="col-12 col-md-9">
+										<input class="form-control form-control-solid" type="tel" value="3333-3333">
+									</div>
+								</div>
+							</div>
+
+							<div class="border-bottom">
+
+								<div class="row">
+									<div class="col-12">
+										<h6 class="mt-3 mb-3">Endereço</h6>
+									</div>
+								</div>
+
+								<div class="form-group row mb-3">
+									<label class="col-12 col-md-3 col-form-label">CEP</label>
+									<div class="col-12 col-md-9">
+										<input class="form-control form-control-solid" type="text" value="70092-900">
+									</div>
+								</div>
+
+								<div class="form-group row mb-3">
+									<label class="col-12 col-md-3 col-form-label">Endereço</label>
+									<div class="col-12 col-md-9">
+										<input class="form-control form-control-solid" type="text" value="SBS Quadra 4 Bloco A Lotes 3/4">
+									</div>
+								</div>
+
+								<div class="form-group row mb-3">
+									<label class="col-12 col-md-3 col-form-label">Número</label>
+									<div class="col-12 col-md-9">
+										<input class="form-control form-control-solid" type="text" value="3/4">
+									</div>
+								</div>
+
+								<div class="form-group row mb-3">
+									<label class="col-12 col-md-3 col-form-label">Bairro</label>
+									<div class="col-12 col-md-9">
+										<input class="form-control form-control-solid" type="text" value="Asa Sul">
+									</div>
+								</div>
+
+								<div class="form-group row mb-3">
+									<label class="col-12 col-md-3 col-form-label">Complemento</label>
+									<div class="col-12 col-md-9">
+										<input class="form-control form-control-solid" type="text" value="">
+									</div>
+								</div>
+
+								<div class="form-group row mb-3">
+									<label class="col-12 col-md-3 col-form-label">Estados</label>
+									<div class="col-12 col-md-9">
+										<select class="form-select form-select-sm form-control form-control-solid" aria-label=".form-select-sm example">
+											<option selected>Selecione o estado</option>
+											<option value="1">Distrito Federal</option>
+											<option value="2">São Paulo</option>
+											<option value="3">Rio de Janeiro</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group row mb-3">
+									<label class="col-12 col-md-3 col-form-label">Cidade</label>
+									<div class="col-12 col-md-9">
+										<select class="form-select form-select-sm form-control form-control-solid" aria-label=".form-select-sm example">
+											<option selected>Selecione uma cidade</option>
+											<option value="1">Brasília</option>
+										</select>
+									</div>
+								</div>
+
+							</div>
+							
+						</div>
+					</form>
+					<!-- / Form -->
+				</div>
+
+				<!-- Card dados acesso -->
+				<div id="nav-dados-acesso" class="h-100 card card-custom card-stretch card-data tab-pane fade border-white" role="tabpanel" aria-labelledby="nav-dados-acesso-tab">
+					<!-- Header -->
+					<div class="card-header text-md-left flex-column flex-md-row d-flex justify-content-between p-0 bg-white">
+
+						<div class="card-title align-items-start flex-column">
+							<h4 class="card-label text-dark">Dados de acesso</h4>
+							<span class="text-muted fw-bold font-size-sm mt-1">
+								Atualize seus dados de acesso
+							</span>
 						</div>
 
-						<div class="tab-pane fade pb-3" id="nav-api">
-							<fieldset>
-								<legend>CHAVES DE ACESSO</legend>
-								<div class="card card-body">
-									<form name="form-dados-api" method="POST" action="" class="clearfix">
-										<div class="alert alert-info mb-0">
-											Esta chave é válida para a empresa <b>"Banco Atena"</b> com o usuário <b>"Banco Atena"</b>.
-										</div>
-										<div class="form-group mt-2">
-											<div class="row">
-												<div class="col">
-													<label class="control-label">Client ID</label>
-													<input type="text" name="codigo_usuario" class="form-control" value="ZNBpFssYi5Qp" readonly="">
-												</div>
-											</div>
-										</div>
-										<div class="form-group mt-2">
-											<div class="row">
-												<div class="col">
-													<label class="control-label">Client Secret</label>
-													<input type="text" name="client_secret" class="form-control" value="FrifZ8kUAi4qDefnvKWTjtEtfSI3WJ2x2Xptv0g16fJ34f5uTtKpn2jIwvvIgop6" readonly="">
-												</div>
-											</div>
-										</div>
-										<input type="submit" class="btn btn-success pull-right mt-3" value="Gerar chaves de acesso">
-									</form>
+						<div class="card-toolbar">
+							<button type="submit" class="btn btn-success me-2 px-5 p-2 px-md-3 disabled" disabled="disabled">
+								Salvar dados de acesso
+							</button>
+							<button type="submit" class="btn btn-secondary px-5 p-2 px-md-3 mt-2 mt-md-0 disabled" disabled="disabled">
+								Cancelar
+							</button>
+						</div>
+					</div>
+					<!-- / Header -->
+
+					<!-- Form -> inputs -->
+					<form class="form">
+						<div class="card-body">
+
+							<div class="form-group row mb-3">
+								<label class="col-12 col-md-3 col-form-label">E-mail</label>
+								<div class="col-12 col-md-9">
+									<input class="form-control form-control-solid" type="email" placeholder="Digite seu e-mail">
 								</div>
+							</div>
+
+							<div class="form-group row mb-3">
+								<label class="col-12 col-md-3 col-form-label">Senha atual</label>
+								<div class="col-12 col-md-9">
+									<input class="form-control form-control-solid" type="password" placeholder="Senha atual">
+								</div>
+							</div>
+   
+							<div class="form-group row mb-3">
+								<label class="col-12 col-md-3 col-form-label">Nova senha</label>
+								<div class="col-12 col-md-9">
+									<input class="form-control form-control-solid" type="password" placeholder="Nova senha">
+								</div>
+							</div>
+
+							<div class="form-group row mb-3">
+								<label class="col-12 col-md-3 col-form-label">Confirme a nova senha</label>
+								<div class="col-12 col-md-9">
+									<input class="form-control form-control-solid" type="password" placeholder="Confirme a nova senha">
+								</div>
+							</div>
+
+						</div>
+					</form>
+					<!-- / Form -->
+				</div>
+
+				<!-- Card segurança -->
+				<div id="nav-seguranca" class="h-100 card card-custom card-stretch card-data tab-pane fade border-white" role="tabpanel" aria-labelledby="nav-seguranca-tab">
+					<!-- Header -->
+					<div class="card-header text-md-left flex-column flex-md-row d-flex justify-content-between p-0 bg-white">
+
+						<div class="card-title align-items-start flex-column">
+							<h4 class="card-label text-dark">Segurança</h4>
+							<span class="text-muted fw-bold font-size-sm mt-1">
+								Segurança da conta
+							</span>
+						</div>
+
+						<div class="card-toolbar">
+							<button type="submit" class="btn btn-success me-2 px-5 p-2 px-md-3 disabled" disabled="disabled">
+								Salvar
+							</button>
+							<button type="submit" class="btn btn-secondary px-5 p-2 px-md-3 mt-2 mt-md-0 disabled" disabled="disabled">
+								Cancelar
+							</button>
+						</div>
+
+					</div>
+					<!-- / Header -->
+
+					<div class="card-body mb-4">
+
+						<form name="form-dados-seguranca" method="post" action="">
+							<fieldset class="border-bottom ">
+
+								<div class="row">
+									<div class="col-12">
+										<h6 class="mt-3 mb-3">Duplo fator de autenticação</h6>
+									</div>
+								</div>
+
+									<div class="form-row">
+										<div class="col form-group">
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" name="in_autenticacao_email" id="in_auth_email" value="S">
+												<label class="form-check-label" for="in_auth_email">
+													Ativar autenticação com e-mail
+												</label>
+											</div>
+										</div>
+									</div>
 							</fieldset>
-							<fieldset class="mt-2">
-								<legend>API</legend>
-								<div class="card card-body">
-									<div class="form-group">
+						</form>
+						
+					</div>
+					
+				</div>
+
+
+				<!-- Card API -->
+				<div id="nav-api" class="h-100 card card-custom card-stretch card-data tab-pane fade border-white" role="tabpanel" aria-labelledby="nav-api-tab">
+					<!-- Header -->
+					<div class="card-header text-md-left flex-column flex-md-row d-flex justify-content-between p-0 bg-white">
+
+						<div class="card-title align-items-start flex-column">
+							<h4 class="card-label text-dark">API</h4>
+							<span class="text-muted fw-bold font-size-sm mt-1">
+								Informações sobre a API
+							</span>
+						</div>
+
+					</div>
+					<!-- / Header -->
+
+					<div class="card-body">
+
+						<div>
+							<div class="row">
+								<div class="col-12">
+									<h6 class="mt-3 mb-3">Chaves de acesso</h6>
+								</div>
+							</div>
+
+							<div class="">
+								<form name="form-dados-api" method="POST" action="" class="clearfix">
+									<div class="alert alert-primary alert-dismissible fade show mb-0">
+										Esta chave é válida para a empresa <b>"Banco Atena"</b> com o usuário <b>"Banco Atena"</b>.
+										<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+									</div>
+									<div class="form-group mt-2">
 										<div class="row">
 											<div class="col">
-												<label class="control-label">URL de Autenticação</label>
-												<input type="text" name="url_autentica" class="form-control" value="http://localhost/valid-repos/regdoc/public/api/auth/login" readonly="">
+												<label class="control-label">Client ID</label>
+												<input type="text" name="codigo_usuario" class="form-control" readonly="">
 											</div>
 										</div>
 									</div>
 									<div class="form-group mt-2">
 										<div class="row">
 											<div class="col">
-												<label class="control-label d-block">Download do Manual de Integração</label>
-												<a href="https://validcertificadora.atlassian.net/l/c/vXtwBbEN" target="_blank" class="btn btn-primary">DOCUMENTAÇÃO DA API</a>
+												<label class="control-label">Client Secret</label>
+												<input type="text" name="client_secret" class="form-control" readonly="">
 											</div>
 										</div>
 									</div>
-								</div>
-							</fieldset>
+
+									<!-- Input de gerar chave de acesso -->
+									<input 
+										type="submit" 
+										class="btn btn-success btn-sm pull-right mt-3 px-3 py-2" 
+										value="Gerar chaves de acesso"
+									/>
+								</form>
+							</div>
 						</div>
 
-						<div class="tab-pane fade pb-3" id="nav-seguranca">
-							<form name="form-dados-seguranca" method="post" action="">
-								<fieldset>
-									<legend class="text-uppercase">Duplo Fator de Autenticação</legend>
-									<div class="card card-body">
-										<div class="form-row">
-											<div class="col form-group">
-												<div class="custom-control custom-checkbox">
-													<input type="checkbox" name="in_autenticacao_email" id="in_auth_email" class="custom-control-input" value="S">
-													<label class="custom-control-label" for="in_auth_email">
-														Ativar autenticação com e-mail
-													</label>
-												</div>
-											</div>
-										</div>
-									</div>
-								</fieldset>
-								<div class="form-group mt-3">
+
+						<div class="mt-2">
+							<div class="row">
+								<div class="col-12">
+									<h6 class="mt-3 mb-3">API</h6>
+								</div>
+							</div>
+							<div class="">
+								<div class="form-group ">
 									<div class="row">
 										<div class="col">
-											<input type="reset" class="btn btn-danger float-left" value="Cancelar">
-											<input type="submit" class="btn btn-success float-right" value="Salvar">
+											<label class="control-label d-block">
+												Download do Manual de Integração
+											</label>
+											<a href="https://validcertificadora.atlassian.net/l/c/vXtwBbEN" target="_blank" class="btn btn-primary btn-sm mt-1 px-3 py-2">Documentação da API</a>
 										</div>
 									</div>
 								</div>
-							</form>
+							</div>
 						</div>
-
+						
 					</div>
+					
 				</div>
+
 			</div>
 		</div>
 	</div>
