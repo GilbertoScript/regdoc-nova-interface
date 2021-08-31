@@ -341,7 +341,6 @@
 					<form class="form">
 						<div class="card-body">
 
-
 							<div class="border-bottom">
 
 								<div class="row">
@@ -384,7 +383,6 @@
 							</div>
 
 							<div class="border-bottom">
-							
    
 								<div class="row">
 									<div class="col-12">
@@ -490,6 +488,7 @@
 					</form>
 					<!-- / Form -->
 				</div>
+				<!-- / Card dados pessoais -->
 
 				<!-- Card dados acesso -->
 				<div id="nav-dados-acesso" class="h-100 card card-custom card-stretch card-data tab-pane fade border-white" role="tabpanel" aria-labelledby="nav-dados-acesso-tab">
@@ -550,6 +549,104 @@
 					</form>
 					<!-- / Form -->
 				</div>
+				<!-- / Card dados acesso -->
+
+				<!-- Card API -->
+				<div id="nav-api" class="h-100 card card-custom card-stretch card-data tab-pane fade border-white" role="tabpanel" aria-labelledby="nav-api-tab">
+					<!-- Header -->
+					<div class="card-header text-md-left flex-column flex-md-row d-flex justify-content-between p-0 bg-white">
+
+						<div class="card-title align-items-start flex-column">
+							<h4 class="card-label text-dark">API</h4>
+							<span class="text-muted fw-bold font-size-sm mt-1">
+								Informações sobre a API
+							</span>
+						</div>
+
+					</div>
+					<!-- / Header -->
+
+					<div class="card-body">
+
+						<div class="row">
+							<div class="col-12">
+								<h6 class="mt-3 mb-3">Chaves de acesso</h6>
+							</div>
+						</div>
+
+						<div class="">
+							<form name="form-dados-api" method="POST" action="" class="clearfix">
+								<div class="alert alert-primary alert-dismissible fade show mb-0">
+									Esta chave é válida para a empresa <b>"Banco Atena"</b> com o usuário <b>"Banco Atena"</b>.
+									<button 
+										type="button" 
+										class="btn-close" 
+										data-bs-dismiss="alert" 
+										aria-label="Close"
+									></button>
+								</div>
+
+								<div class="form-group mt-3">
+									<div class="row">
+										<label class="col-12 col-md-3 control-label">
+											Client ID
+										</label>
+										<div class="col-12 col-md-9">
+											<input 
+												type="text" 
+												name="codigo_usuario" 
+												class="form-control" 
+												readonly=""
+											>
+										</div>
+									</div>
+								</div>
+								<div class="form-group mt-2">
+									<div class="row">
+										<label class="control-label col-12 col-md-3">
+											Client Secret
+										</label>
+										<div class="col-12 col-md-9">
+											<input 
+												type="text" 
+												name="client_secret" 
+												class="form-control" 
+												readonly=""
+											>
+										</div>
+									</div>
+								</div>
+
+								<!-- Input de gerar chave de acesso -->
+								<input 
+									type="submit" 
+									class="btn btn-success btn-sm pull-right mt-3 px-3 py-2 col-12 col-md-4" 
+									value="Gerar chaves de acesso"
+								/>
+							</form>
+						</div>
+
+						<div class="mt-2">
+							<div class="row">
+								<div class="col-12">
+									<h6 class="mt-3 mb-3">API</h6>
+								</div>
+							</div>
+							<div class="form-group ">
+								<div class="row">
+									<div class="col">
+										<label class="control-label d-block">
+											Download do Manual de Integração
+										</label>
+										<a href="https://validcertificadora.atlassian.net/l/c/vXtwBbEN" target="_blank" class="btn btn-primary btn-sm mt-1 px-3 py-2 col-12 col-md-4">Documentação da API</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<!-- / Card API -->
 
 				<!-- Card segurança -->
 				<div id="nav-seguranca" class="h-100 card card-custom card-stretch card-data tab-pane fade border-white" role="tabpanel" aria-labelledby="nav-seguranca-tab">
@@ -600,91 +697,8 @@
 						</form>
 						
 					</div>
-					
 				</div>
-
-
-				<!-- Card API -->
-				<div id="nav-api" class="h-100 card card-custom card-stretch card-data tab-pane fade border-white" role="tabpanel" aria-labelledby="nav-api-tab">
-					<!-- Header -->
-					<div class="card-header text-md-left flex-column flex-md-row d-flex justify-content-between p-0 bg-white">
-
-						<div class="card-title align-items-start flex-column">
-							<h4 class="card-label text-dark">API</h4>
-							<span class="text-muted fw-bold font-size-sm mt-1">
-								Informações sobre a API
-							</span>
-						</div>
-
-					</div>
-					<!-- / Header -->
-
-					<div class="card-body">
-
-						<div>
-							<div class="row">
-								<div class="col-12">
-									<h6 class="mt-3 mb-3">Chaves de acesso</h6>
-								</div>
-							</div>
-
-							<div class="">
-								<form name="form-dados-api" method="POST" action="" class="clearfix">
-									<div class="alert alert-primary alert-dismissible fade show mb-0">
-										Esta chave é válida para a empresa <b>"Banco Atena"</b> com o usuário <b>"Banco Atena"</b>.
-										<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-									</div>
-									<div class="form-group mt-2">
-										<div class="row">
-											<div class="col">
-												<label class="control-label">Client ID</label>
-												<input type="text" name="codigo_usuario" class="form-control" readonly="">
-											</div>
-										</div>
-									</div>
-									<div class="form-group mt-2">
-										<div class="row">
-											<div class="col">
-												<label class="control-label">Client Secret</label>
-												<input type="text" name="client_secret" class="form-control" readonly="">
-											</div>
-										</div>
-									</div>
-
-									<!-- Input de gerar chave de acesso -->
-									<input 
-										type="submit" 
-										class="btn btn-success btn-sm pull-right mt-3 px-3 py-2" 
-										value="Gerar chaves de acesso"
-									/>
-								</form>
-							</div>
-						</div>
-
-
-						<div class="mt-2">
-							<div class="row">
-								<div class="col-12">
-									<h6 class="mt-3 mb-3">API</h6>
-								</div>
-							</div>
-							<div class="">
-								<div class="form-group ">
-									<div class="row">
-										<div class="col">
-											<label class="control-label d-block">
-												Download do Manual de Integração
-											</label>
-											<a href="https://validcertificadora.atlassian.net/l/c/vXtwBbEN" target="_blank" class="btn btn-primary btn-sm mt-1 px-3 py-2">Documentação da API</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-					</div>
-					
-				</div>
+				<!-- / Card segurança -->
 
 			</div>
 		</div>
