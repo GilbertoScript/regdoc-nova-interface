@@ -21,9 +21,10 @@
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
     <title>REGDOC - Registros Fiduciários</title>
 </head>
@@ -216,13 +217,13 @@
     <!-- Conteúdo -->
     <div class="container mt-4">
         <div class="card card-content box-app">
-            <div class="card-header d-flex justify-content-between">
+            <div class="card-header header-historico-fiduciario d-flex justify-content-between">
                 <div class="">
                     <h3 class="mb-1">Registros fiduciários</h3>
                     <span class="sub-title">Produtos</span>
                 </div>
                 <div class="">
-                    <div class="buttons col text-right">
+                    <div class="buttons col text-end">
                         <button type="button" class="abrir-filtro btn btn-outline-secondary">
                             <i class="bi bi-funnel-fill"></i> Filtro
                         </button>
@@ -234,163 +235,287 @@
                     </div>
                 </div>
             </div>
-            <div class="card-body">
-                <table id="pedidos-pendentes" class="table table-striped table-bordered table-fixed">
-                    <thead>
-                        <tr>
-                            <th width="17%">Protocolo</th>
-                            <th width="25%">Identificação</th>
-                            <th width="28%">Parte(s)</th>
-                            <th width="20%">Situação</th>
-                            <th width="10%">Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+            
 
-                        <tr>
-                            <td>
-                                0821.1180.0425.0001
-                                <span class="badge bg-primary badge-sm">11/08/2021</span>
-                            </td>
-                            <td>
-                                <b>Proposta:</b> 555
-                            </td>
-                            <td>
-                                <div class="collapse-partes">
-                                    <button class="btn btn-block text-left collapsed" type="button"
-                                        data-toggle="collapse" data-target="#collapse_2" aria-expanded="true"
-                                        aria-controls="collapse_2">
-                                        4 partes
+            <!-- Card header - registro histórico -->
+            <div class="card-header">
 
-                                        <i class="bi bi-caret-right-fill"></i>
-                                    </button>
-                                    <div id="collapse_2" class="collapse partes" aria-labelledby="heading_2">
-                                        <div class="parte">
-                                            <span class="ellipsis" data-toggle="tooltip" title=""
-                                                data-original-title="Pessoa 1">Pessoa
-                                                1</span>
-                                            <span class="small">
-                                                <b>Adquirente</b> -
-                                                <b> CPF: </b>
-                                                777.302.690-40
-                                            </span>
-                                        </div>
-                                        <div class="parte">
-                                            <span class="ellipsis" data-toggle="tooltip" title=""
-                                                data-original-title="Pessoa 2">Pessoa
-                                                2</span>
-                                            <span class="small">
-                                                <b>Credor</b> -
-                                                <b> CPF: </b>
-                                                413.243.880-56
-                                            </span>
-                                        </div>
-                                        <div class="parte">
-                                            <span class="ellipsis" data-toggle="tooltip" title=""
-                                                data-original-title="Pessoa 3">Pessoa
-                                                3</span>
-                                            <span class="small">
-                                                <b>Transmitente</b> -
-                                                <b> CPF: </b>
-                                                158.334.070-01
-                                            </span>
-                                        </div>
-                                        <div class="parte">
-                                            <span class="ellipsis" data-toggle="tooltip" title=""
-                                                data-original-title="Pessoa 4">Pessoa
-                                                4</span>
-                                            <span class="small">
-                                                <b>Testemunha</b> -
-                                                <b> CPF: </b>
-                                                502.414.550-06
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                Proposta enviada
-                            </td>
-                            <td class="options">
-                                <a href="#" class="btn btn-primary">
-                                    Acessar
+                <!-- Row -->
+                <div class="row">
+                    <!-- Coluna esquerda -->
+                    <div class="col-12 d-flex d-md-block flex-column align-items-center col-md-8">
+                        <figure class="logo float-start me-2 d-flex align-items-center historico">
+                        </figure>
+                        <!-- Protocolo do registro fiduciário -->
+                        <strong class="protocolo-historico">
+                            0821.2480.0425.0002
+                        </strong>
+                        <!-- Protocolo da central -->
+                        <span class="d-block">
+                            <small>
+                                <a href="#" class="acessar-historico-central-registro badge badge-pill bg-primary mb-1">
+                                  Protocolo da central: 1234
                                 </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                0721.2880.0425.0001
-                                <span class="badge bg-primary badge-sm">28/07/2021</span>
-                            </td>
-                            <td>
-                                <b>Contrato:</b> 1002
-                            </td>
-                            <td>
-                                <div class="collapse-partes">
-                                    <button class="btn btn-block text-left collapsed" type="button"
-                                        data-toggle="collapse" data-target="#collapse_1" aria-expanded="false"
-                                        aria-controls="collapse_1">
-                                        3 partes
-                                        <i class="bi bi-caret-right-fill"></i>
-                                    </button>
-                                    <div id="collapse_1" class="collapse partes" aria-labelledby="heading_1">
-                                        <div class="parte">
-                                            <span class="ellipsis" data-toggle="tooltip" title=""
-                                                data-original-title="Parte Compradora">Parte Compradora</span>
-                                            <span class="small">
-                                                <b>Adquirente</b> -
-                                                <b> CPF: </b>
-                                                868.915.220-21
-                                            </span>
-                                        </div>
-                                        <div class="parte">
-                                            <span class="ellipsis" data-toggle="tooltip" title=""
-                                                data-original-title="Conjuge da Parte Compradora">Conjuge da Parte
-                                                Compradora</span>
-                                            <span class="small">
-                                                <b>Transmitente</b> -
-                                                <b> CPF: </b>
-                                                994.738.570-12
-                                            </span>
-                                        </div>
-                                        <div class="parte">
-                                            <span class="ellipsis" data-toggle="tooltip" title=""
-                                                data-original-title="Conjuge da Parte Compradora">Conjuge da Parte
-                                                Compradora</span>
-                                            <span class="small">
-                                                <b>Testemunha</b> -
-                                                <b> CPF: </b>
-                                                994.738.570-12
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                Processamento do registro
-                            </td>
-                            <td class="options">
-                                <a href="#" class="btn btn-primary">
-                                    Acessar
-                                </a>
-                            </td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="6">
-                                <div class="row">
-                                    <div class="col">
-                                        Exibindo <b>3</b> de <b>3</b> registros.
-                                    </div>
-                                    <div class="col text-right">
+                                <br>
+                            </small>
+                        </span>
+                        <!-- Informações sobre o registro -->
+                        <span class="d-block mt-1 mb-1 mt-md-0 text-center text-md-start">
+                            <small>
+                                <b>Contrato:</b>
+                                1001
+                            </small>
+                        </span>
+                        <!-- Partes -->
+                        <small class="mt-1">
+                            <div class="collapse-partes d-flex">
+                                <b>Partes:&nbsp;</b>
 
-                                    </div>
+                                <div class="parte registro-5">
+                                    <span data-toggle="tooltip" data-original-title="Cristian Matos">
+                                        Cristian,&nbsp;
+                                    </span>
                                 </div>
-                            </td>
-                        </tr>
-                    </tfoot>
-                </table>
+
+                                <div class="parte registro-5">
+                                    <span data-toggle="tooltip" data-original-title="John Doe">
+                                        John,&nbsp;
+                                    </span>
+                                </div>
+
+                                <a href="javascript:void(0);" class="p-1 ms-1 badge bg-secondary d-flex align-items-center badge-vermais" data-info="registro-5">
+                                    <i class="fas fa-plus-circle" aria-hidden="true"></i> Ver mais
+                                </a>
+                                
+                            </div>
+                        </small>
+                    </div><!-- / Coluna esquerda -->
+                    <!-- Coluna direita -->
+                    <div class="col-12 d-flex d-md-block flex-column align-items-center col-md-4 text-end">
+                        <div class="header-data d-flex align-items-center mt-3 mt-md-0 d-md-inline-block text-start me-2">
+                            <b class="me-3 me-md-0">Início</b><br>
+                            <div class="btn btn-light-primary no-hover">
+                                <b>24/08/2021</b>
+                            </div>
+                        </div>
+                        <div class="header-data d-flex align-items-center mt-3 mt-md-0 d-md-inline-block text-start">
+                            <b class="me-3 me-md-0">Atualização</b><br>
+                            <div class="btn btn-light-success no-hover">
+                                <b>24/08/2021</b>
+                            </div>
+                            <div class="btn btn-light-primary ms-1 ms-md-0" data-toggle="modal" data-target="#registro-fiduciario-datas" data-idregistro="5">
+                                <i class="fas fa-plus" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <br>
+                        <!-- Header progresso -->
+                        <div class="header-progresso d-inline-block text-start mt-2 w-75">
+                            <b>
+                                Contrato cadastrado
+                            </b>
+                            <br>
+                            <!-- Barra de progresso -->
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <b>
+                                20%
+                            </b>
+                        </div>
+                    </div><!-- / Coluna direita -->
+                </div><!-- / Row -->
+            </div>
+
+            <!-- Card body -->
+            <div id="registro-fiduciario-novo-design" class="card-body card-body-historico d-flex flex-column d-md-block">
+                <!-- Checklist -->
+                <button type="button" data-toggle="modal" data-target="#registro-fiduciario-checklists" class="btn btn-light-primary ms-2 mt-1 mt-md-0" data-idregistro="5">
+                    <i class="fas fa-tasks" aria-hidden="true"></i>
+                    0/0 checklists
+                </button>
+                <!-- Comentários -->
+                <button type="button" data-toggle="modal" data-target="#registro-fiduciario-comentarios" class="btn btn-light-primary ms-2 mt-1 mt-md-0" data-idregistro="5">
+                    <i class="fas fa-comments" aria-hidden="true"></i>
+                    2 comentários
+                </button>
+                <!-- Observadores -->
+                <button type="button" data-toggle="modal" data-target="#registro-fiduciario-observadores" class="btn btn-light-primary ms-2 mt-1 mt-md-0" data-idregistro="5">
+                    <i class="fas fa-eye" aria-hidden="true"></i>
+                    1 observador
+                </button>
+                <!-- Div Opções -->
+                <div class="opcoes btn-group d-flex d-md-block flex-column mt-3 mt-md-0 float-end" role="group">
+                    <!-- Botão para acessar o registro completo -->
+                    <button href="#" class="btn btn-primary me-0 me-md-2 mb-2 mb-md-0">
+                        Detalhes
+                    </button>
+                    <!-- Botão para ações no registro -->
+                    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split dropdown-text" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Ações neste registro
+                    </button>
+                    <!-- Menu Dropdown para ações no registro -->
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item iniciar-documentacao" href="#" data-idregistro="5">
+                            <span data-toggle="tooltip" data-original-title="Iniciar o fluxo de documentação do registro">
+                                Iniciar documentação
+                            </span>
+                        </a>
+                        <a class="dropdown-item excluir-registro" href="javascript:void(0);" data-idregistro="5" data-produto="fiduciario">
+                            <span data-toggle="tooltip" data-original-title="Excluir registro">
+                                Excluir registro
+                            </span>
+                        </a>
+                    </div><!-- / Menu Dropdown para ações no registro -->
+                </div><!-- / Div Opções -->
+            </div>
+
+            <!-- Card header - registro histórico -->
+            <div class="card-header">
+
+                <!-- Row -->
+                <div class="row">
+                    <!-- Coluna esquerda -->
+                    <div class="col-12 d-flex d-md-block flex-column align-items-center col-md-8">
+                        <figure class="logo float-start me-2 d-flex align-items-center historico">
+                        </figure>
+                        <!-- Protocolo do registro fiduciário -->
+                        <strong class="protocolo-historico">
+                            0821.1280.0425.0001
+                        </strong>
+                        <!-- Protocolo da central -->
+                        <span class="d-block">
+                            <small>
+                                <a href="#" class="acessar-historico-central-registro badge badge-pill bg-primary mb-1">
+                                  Protocolo da central: 8795
+                                </a>
+                                <br>
+                            </small>
+                        </span>
+                        <!-- Informações sobre o registro -->
+                        <span class="d-block mt-1 mb-1 mt-md-0 text-center text-md-start">
+                            <small>
+                                <b>Contrato:</b>
+                                1002
+                            </small>
+                        </span>
+                        <!-- Partes -->
+                        <small class="mt-1">
+                            <div class="collapse-partes d-flex">
+                                <b>Partes:&nbsp;</b>
+
+                                <div class="parte registro-5">
+                                    <span data-toggle="tooltip" data-original-title="Cristian Matos">
+                                        Rosangelo,&nbsp;
+                                    </span>
+                                </div>
+
+                                <div class="parte registro-5">
+                                    <span data-toggle="tooltip" data-original-title="John Doe">
+                                        Joe,&nbsp;
+                                    </span>
+                                </div>
+
+                                <a href="javascript:void(0);" class="p-1 ms-1 badge bg-secondary d-flex align-items-center badge-vermais" data-info="registro-5">
+                                    <i class="fas fa-plus-circle" aria-hidden="true"></i> Ver mais
+                                </a>
+                                
+                            </div>
+                        </small>
+                    </div><!-- / Coluna esquerda -->
+                    <!-- Coluna direita -->
+                    <div class="col-12 d-flex d-md-block flex-column align-items-center col-md-4 text-end">
+                        <div class="header-data d-flex align-items-center mt-3 mt-md-0 d-md-inline-block text-start me-2">
+                            <b class="me-3 me-md-0">Início</b><br>
+                            <div class="btn btn-light-primary no-hover">
+                                <b>24/07/2021</b>
+                            </div>
+                        </div>
+                        <div class="header-data d-flex align-items-center mt-3 mt-md-0 d-md-inline-block text-start">
+                            <b class="me-3 me-md-0">Atualização</b><br>
+                            <div class="btn btn-light-success no-hover">
+                                <b>01/08/2021</b>
+                            </div>
+                            <div class="btn btn-light-primary ms-1 ms-md-0" data-toggle="modal" data-target="#registro-fiduciario-datas" data-idregistro="5">
+                                <i class="fas fa-plus" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <br>
+                        <!-- Header progresso -->
+                        <div class="header-progresso d-inline-block text-start mt-2 w-75">
+                            <b>
+                                Documentação do registro
+                            </b>
+                            <br>
+                            <!-- Barra de progresso -->
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <b>
+                                50%
+                            </b>
+                        </div>
+                    </div><!-- / Coluna direita -->
+                </div><!-- / Row -->
+            </div>
+
+
+            <!-- Card body -->
+            <div id="registro-fiduciario-novo-design" class="card-body card-body-historico d-flex flex-column d-md-block">
+                <!-- Checklist -->
+                <button type="button" data-toggle="modal" data-target="#registro-fiduciario-checklists" class="btn btn-light-primary ms-2 mt-1 mt-md-0" data-idregistro="5">
+                    <i class="fas fa-tasks" aria-hidden="true"></i>
+                    0/0 checklists
+                </button>
+                <!-- Comentários -->
+                <button type="button" data-toggle="modal" data-target="#registro-fiduciario-comentarios" class="btn btn-light-primary ms-2 mt-1 mt-md-0" data-idregistro="5">
+                    <i class="fas fa-comments" aria-hidden="true"></i>
+                    7 comentários
+                </button>
+                <!-- Observadores -->
+                <button type="button" data-toggle="modal" data-target="#registro-fiduciario-observadores" class="btn btn-light-primary ms-2 mt-1 mt-md-0" data-idregistro="5">
+                    <i class="fas fa-eye" aria-hidden="true"></i>
+                    2 observador
+                </button>
+                <!-- Div Opções -->
+                <div class="opcoes btn-group d-flex d-md-block flex-column mt-3 mt-md-0 float-end" role="group">
+                    <!-- Botão para acessar o registro completo -->
+                    <button href="#" class="btn btn-primary me-0 me-md-2 mb-2 mb-md-0">
+                        Detalhes
+                    </button>
+                    <!-- Botão para ações no registro -->
+                    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split dropdown-text" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Ações neste registro
+                    </button>
+                    <!-- Menu Dropdown para ações no registro -->
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item iniciar-documentacao" href="#" data-idregistro="5">
+                            <span data-toggle="tooltip" data-original-title="Iniciar o fluxo de documentação do registro">
+                                Iniciar documentação
+                            </span>
+                        </a>
+                        <a class="dropdown-item excluir-registro" href="javascript:void(0);" data-idregistro="5" data-produto="fiduciario">
+                            <span data-toggle="tooltip" data-original-title="Excluir registro">
+                                Excluir registro
+                            </span>
+                        </a>
+                    </div><!-- / Menu Dropdown para ações no registro -->
+                </div><!-- / Div Opções -->
+            </div>
+
+            <div class="row p-4 contador-todos-registros align-items-center">
+                <div class="col align-items-center">
+
+                    Exibindo 
+                    <b>2</b> 
+                    de 
+                    <b>2</b> 
+
+                    registros.
+                </div>
+
+                <div class="col text-end">
+                    
+                </div>
             </div>
         </div>
     </div>
@@ -398,15 +523,11 @@
     <!-- Footer -->
     <footer class="mt-3 py-4 bg-white">
         <div class="container">
-            <b class="text-black-50">2021©</b> <a href="http://www.validhub.com.br"
-                class="text-black text-decoration-none" target="_blank">REGDOC | Empresa do grupo Valid S/A Versão:
-                2.0.6</a>
+            <b class="text-black-50">2021©</b> 
+            <a href="http://www.validhub.com.br" class="text-black text-decoration-none" target="_blank">    REGDOC | Empresa do grupo Valid S/A Versão: 2.0.6
+            </a>
         </div>
     </footer>
-
-
-
-
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
