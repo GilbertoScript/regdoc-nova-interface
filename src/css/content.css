@@ -1,4 +1,9 @@
 @charset "UTF-8";
+div.card-body.card-body-historico {
+  border-bottom: 1rem solid #eaeaea;
+  margin-bottom: 1rem;
+}
+
 div.card.box-app {
   background-color: #FFF;
   border: none;
@@ -11,6 +16,7 @@ div.card.box-app > div.card-header {
   margin: 0.765rem 1.5rem;
   padding: 1rem 0.5rem 0 0.5rem;
   border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 div.card.box-app > div.card-header h3 {
   color: #181c32;
@@ -25,7 +31,7 @@ div.card.box-app > div.card-header div.card-subtitle {
   font-size: 0.9rem;
 }
 div.card.box-app > div.card-header figure.logo {
-  background-color: #EAEAEA;
+  background-color: #eef0f8;
   border-radius: 3px;
   height: 150px;
   padding: 10px;
@@ -63,6 +69,14 @@ div.card.box-app ul.nav > li.nav-item > a {
   color: #545454;
   font-weight: bold;
   padding: 1rem 0;
+}
+div.card.box-app > div.card-header.header-historico-fiduciario {
+  background-color: transparent;
+  font-size: 1.3rem;
+  margin: 0;
+  padding: 1.75rem;
+  border-bottom: 1rem solid #eef0f8;
+  margin-bottom: 1rem;
 }
 div.card.box-app div.tab-content {
   padding: 2rem;
@@ -173,6 +187,96 @@ div.alertas a.alerta > i {
   transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, -webkit-box-shadow 0.15s ease;
   transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
   transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, -webkit-box-shadow 0.15s ease;
+}
+
+.custom-control-label::before {
+  background-color: #FFFFFF;
+  border: 1px solid #CCC;
+}
+
+div.header-data {
+  font-size: 0.8rem;
+}
+
+div.header-data .btn {
+  font-size: 0.8rem !important;
+}
+
+div.header-progresso {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 767.98px) {
+  div.header-progresso {
+    width: 100% !important;
+  }
+}
+div.contador-todos-registros {
+  margin-top: -1rem;
+}
+
+.collapse-partes.d-flex div.parte:nth-child(n+4) {
+  display: none;
+}
+
+.collapse-partes.d-flex a:nth-child(n+5) {
+  display: none !important;
+}
+
+div.card.box-app > div.card-header strong.protocolo-historico {
+  font-size: 1.05rem;
+}
+
+.collapse-partes.d-flex,
+div.card.box-app > div.card-header span,
+div.card.box-app > div.card-header span small {
+  font-size: 0.9rem;
+}
+
+div.card-body.card-body-historico {
+  border-bottom: 1rem solid #eef0f8;
+  margin-bottom: 1rem;
+}
+
+div.card.box-app > div.card-body {
+  padding: 1rem 1.5rem;
+}
+
+.badge {
+  font-size: 85%;
+  text-decoration: none;
+}
+.badge:hover {
+  filter: brightness(1.1);
+  color: #fff;
+}
+
+.btn-light-primary {
+  background-color: #e1e9ff;
+  color: #005ca9;
+  border-color: #e1e9ff;
+}
+
+.btn-light-primary:hover,
+.btn-light-primary:focus,
+.btn-light-primary:active {
+  background-color: #005ca9;
+  border-color: #005ca9;
+  color: #FFF;
+}
+
+.btn-light-success {
+  background-color: #c3f4ce;
+  color: #28a745;
+  border-color: #c3f4ce;
+}
+
+.btn-light-success:hover,
+.btn-light-success:focus,
+.btn-light-success:active {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: #FFF;
 }
 
 /*# sourceMappingURL=content.css.map */

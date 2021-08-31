@@ -1,3 +1,8 @@
+div.card-body.card-body-historico {
+    border-bottom: 1rem solid #eaeaea;
+    margin-bottom: 1rem;
+}
+
 // Box principal
 div.card.box-app {
 	background-color:#FFF;
@@ -5,12 +10,16 @@ div.card.box-app {
 	border-radius:3px;
 	padding:0;
 
+
+
     >div.card-header {
         background-color:transparent;
         font-size:1.3rem;
         margin:0.765rem 1.5rem;
         padding:1rem .5rem 0 .5rem;
         border: 0;
+        border-bottom: 1px solid rgba(0,0,0,.125);
+
 
         h3 {
             color: #181c32;
@@ -29,7 +38,7 @@ div.card.box-app {
     }
 
     >div.card-header figure.logo {
-        background-color: #EAEAEA;
+        background-color: #eef0f8;
         border-radius: 3px;
         height: 150px;
         padding: 10px;
@@ -76,6 +85,15 @@ div.card.box-app {
             font-weight: bold;
             padding: 1rem 0;
         }
+    }
+
+    >div.card-header.header-historico-fiduciario {
+        background-color:transparent;
+        font-size:1.3rem;
+        margin: 0;
+        padding: 1.75rem;
+        border-bottom: 1rem solid #eef0f8;
+        margin-bottom: 1rem;
     }
 
     div.tab-content {
@@ -199,4 +217,87 @@ div.alertas a.alerta {
     transition: color .15s ease,background-color .15s ease,border-color .15s ease,-webkit-box-shadow .15s ease;
     transition: color .15s ease,background-color .15s ease,border-color .15s ease,box-shadow .15s ease;
     transition: color .15s ease,background-color .15s ease,border-color .15s ease,box-shadow .15s ease,-webkit-box-shadow .15s ease;
+}
+
+.custom-control-label::before {
+    background-color: #FFFFFF;
+    border: 1px solid #CCC;
+}
+div.header-data {
+    font-size: .8rem;
+}
+div.header-data .btn {
+    font-size: .8rem !important;
+}
+div.header-progresso {
+    font-size: .8rem;
+}
+@media (max-width: 767.98px) {
+
+    div.header-progresso {
+        width: 100% !important;
+    }
+}
+div.contador-todos-registros {
+    margin-top: -1rem;
+}
+.collapse-partes.d-flex div.parte:nth-child(n + 4) {
+    display: none;
+}
+.collapse-partes.d-flex a:nth-child(n + 5) {
+    display: none !important;
+}
+
+
+div.card.box-app>div.card-header strong.protocolo-historico {
+    font-size: 1.050rem;
+}
+.collapse-partes.d-flex,
+div.card.box-app>div.card-header span,
+div.card.box-app>div.card-header span small {
+    font-size: 0.90rem;
+}
+div.card-body.card-body-historico {
+    border-bottom: 1rem solid #eef0f8;
+    margin-bottom: 1rem;
+}
+div.card.box-app>div.card-body {
+    padding:1rem 1.5rem;
+}
+
+.badge {
+    font-size: 85%;
+    text-decoration: none;
+
+    &:hover {
+        filter: brightness(1.1);
+        color: #fff;
+    }
+
+}
+
+.btn-light-primary {
+    background-color: #e1e9ff;
+    color: #005ca9;
+    border-color: #e1e9ff;
+}
+.btn-light-primary:hover,
+.btn-light-primary:focus,
+.btn-light-primary:active {
+    background-color: #005ca9;
+    border-color: #005ca9;
+    color: #FFF;
+}
+
+.btn-light-success {
+    background-color: #c3f4ce;
+    color: #28a745;
+    border-color: #c3f4ce;
+}
+.btn-light-success:hover,
+.btn-light-success:focus,
+.btn-light-success:active {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #FFF;
 }
