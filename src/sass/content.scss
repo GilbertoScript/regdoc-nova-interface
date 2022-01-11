@@ -10,8 +10,6 @@ div.card.box-app {
 	border-radius:3px;
 	padding:0;
 
-
-
     >div.card-header {
         background-color:transparent;
         font-size:1.3rem;
@@ -19,7 +17,6 @@ div.card.box-app {
         padding:1rem .5rem 0 .5rem;
         border: 0;
         border-bottom: 1px solid rgba(0,0,0,.125);
-
 
         h3 {
             color: #181c32;
@@ -59,8 +56,6 @@ div.card.box-app {
     >table {
         font-size:.85rem;
         margin:1.5rem 0 0 0;
-
-       
 
         td.options div.dropdown-menu {
             left:auto !important;
@@ -153,7 +148,6 @@ table.table td div.parte>span.ellipsis {
     -webkit-line-clamp: 1;
 }
 
-
 /* Alertas */
 
 /* Alertas iniciais */
@@ -197,8 +191,6 @@ div.alertas a.alerta {
         transition: .4s;
     }
 }
-
-
 
 /* Tabs */
 #pills-tabContent div.h-100 {
