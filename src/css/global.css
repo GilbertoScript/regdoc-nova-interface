@@ -25,6 +25,11 @@ button {
   border-color: #005ca9;
 }
 
+.bg-orange {
+  background-color: #DC4943;
+  color: #FFF;
+}
+
 .container.mt-4 div div.buttons button,
 .container.mt-4 div div.buttons a {
   font-size: 0.85rem;

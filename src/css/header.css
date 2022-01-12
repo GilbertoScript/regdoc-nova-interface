@@ -26,6 +26,7 @@ header nav.navbar ul.navbar-nav > li.nav-item > a.nav-link {
   border-radius: 0.42rem;
   color: #FFF;
   padding: 0.75rem 1.25rem;
+  font-size: 14px;
 }
 header nav.navbar ul.navbar-nav > li.nav-item > a.nav-link.disabled {
   color: rgba(255, 255, 255, 0.8);
@@ -53,6 +54,9 @@ header nav.navbar div.user button > span.initial {
   height: 35px;
   line-height: 35px;
   width: 35px;
+}
+header nav.navbar .dropdown-item.active, header nav.navbar .dropdown-item:active {
+  background: #DC4943;
 }
 
 header nav.navbar ul.navbar-nav > li.nav-item.active > a.nav-link,
