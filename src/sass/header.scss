@@ -29,6 +29,7 @@ header {
                 border-radius: .42rem;
                 color: #FFF;
                 padding: .75rem 1.25rem;
+                font-size: 14px;
             }
 
             >li.nav-item>a.nav-link.disabled {
@@ -64,6 +65,10 @@ header {
             height: 35px;
             line-height: 35px;
             width: 35px;
+        }
+
+        .dropdown-item.active, .dropdown-item:active {
+            background: #DC4943;
         }
     }
 }

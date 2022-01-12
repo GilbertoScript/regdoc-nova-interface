@@ -197,6 +197,14 @@ div.alertas a.alerta {
     padding: 1.5rem 2rem 0 2rem !important;
 }
 
+#pills-tab {
+
+    li a.nav-link.active, 
+    li a.show>.nav-link {
+        background-color: #DC4943;
+    }
+}
+
 /* Formulário */
 .form-control {
     font-size: .9rem;
