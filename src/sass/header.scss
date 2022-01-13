@@ -23,43 +23,76 @@ header {
 
             >li.nav-item {
                 padding: 0 .25rem;
-            }
 
-            >li.nav-item>a.nav-link {
-                border-radius: .42rem;
-                color: #FFF;
-                padding: .75rem 1.25rem;
-                font-size: 14px;
-            }
+                >a.nav-link {
+                    border-radius: .42rem;
+                    color: #FFF;
+                    padding: .75rem 1.25rem;
+                    font-size: 14px;
 
-            >li.nav-item>a.nav-link.disabled {
-                color: rgba(255, 255, 255, .8);
+                    &.disabled { color: rgba(255, 255, 255, .8); }
+                }
+
+                &.active>a.nav-link,
+                >a.nav-link:hover {
+                    background-color: rgba(255, 255, 255, .1);
+                }
             }
         }
 
-        div.user .dropdown-menu {
-            width: 100%;
-            padding: .5rem;
+        div.user {
+
+            .dropdown-menu {
+                width: 100%;
+                padding: .5rem;
+
+                .dropdown-item {
+                    margin: .5rem 0;
+                }
+            }
+
+            button {
+                font-size: 14px;
+                padding: .3rem .4rem;
+
+                >span.initial {
+                    background-color: rgba(255, 255, 255, .2);
+                    border-radius: .42rem;
+                    height: 35px;
+                    line-height: 35px;
+                    width: 35px;
+                }
+
+                &:after { display: none; }
+                &:hover { background-color: rgba(255, 255, 255, .2); }
+            }
+        }
+
+        .dropdown-item.active, 
+        .dropdown-item:active { 
+            background: #DC4943;
+        }
+    }
+}
+
+/* Subheader */
+div#sub-header {
+    height: 150px;
+
+    div.user {
+
+        button {
+            padding: .3rem .365rem;
+        }
+
+        .dropdown-menu {
 
             .dropdown-item {
-                margin: .5rem 0;
+                padding: 1rem;
             }
         }
 
-        div.user button {
-            font-size: 14px;
-            padding: .3rem .4rem;
-        }
-
-        div.user button::after {
-            display: none;
-        }
-
-        div.user button:hover {
-            background-color: rgba(255, 255, 255, .2);
-        }
-
-        div.user button>span.initial {
+        span.initial.text-white {
             background-color: rgba(255, 255, 255, .2);
             border-radius: .42rem;
             height: 35px;
@@ -67,45 +100,29 @@ header {
             width: 35px;
         }
 
-        .dropdown-item.active, .dropdown-item:active {
-            background: #DC4943;
-        }
-    }
-}
-
-header nav.navbar ul.navbar-nav>li.nav-item.active>a.nav-link,
-header nav.navbar ul.navbar-nav>li.nav-item>a.nav-link:hover {
-    background-color: rgba(255, 255, 255, .1);
-}
-
-
-/* Subheader */
-div#sub-header {
-    height: 150px;
-
-    .dropdown-menu {
-
-        .dropdown-item {
-            padding: 1rem;
+        #btn-contas {
+            &:after { display: none; }
+            &:hover { background-color: rgba(255, 255, 255, 0.2); }
         }
     }
 
     ol.breadcrumb {
         background-color: transparent;
         padding: 0;
-    }
 
-    ol.breadcrumb>li.breadcrumb-item {
-        color: #FFF;
-    }
+        >li.breadcrumb-item {
+            color: #FFF;
 
-    ol.breadcrumb>li.breadcrumb-item>a {
-        color: rgba(255, 255, 255, 0.7);
-        text-decoration: none;
-    }
+            >a {
+                color: rgba(255, 255, 255, 0.7);
+                text-decoration: none;
+            }
+        }
 
-    ol.breadcrumb>li.breadcrumb-item + li.breadcrumb-item::before {
-        color: #FFF;
+        >li.breadcrumb-item + li.breadcrumb-item::before { 
+            color: #FFF; 
+            content: "•";
+        }
     }
 
     div.signature a {
@@ -114,38 +131,12 @@ div#sub-header {
         line-height: 1.1;
         text-decoration: none;
     }
-
-    .breadcrumb-item + .breadcrumb-item::before {
-        content: "•";
-    }
-}
-
-/* btn initial */
-span.initial.text-white {
-    background-color: rgba(255, 255, 255, .2);
-    border-radius: .42rem;
-    height: 35px;
-    line-height: 35px;
-    width: 35px;
-}
-
-#btn-contas {
-
-    &:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-    }
-    
-    &::after {
-        display: none;
-    }
 }
 
 /** Media querys **/
-
-// sm and md applies to small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
-    .navbar-collapse.justify-content-between {
 
+    .navbar-collapse.justify-content-between {
         background-color: #004d7c;
         z-index: 2;
         border: 1px solid darkgray;
