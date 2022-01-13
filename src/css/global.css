@@ -15,6 +15,16 @@ body {
   font-size: 0.835rem;
 }
 
+.bg-orange {
+  background-color: #DC4943;
+  color: #FFF;
+  transition: 0.9s;
+}
+.bg-orange:hover {
+  background-color: #9c221d;
+  color: #FFF;
+}
+
 /* Botões */
 button {
   font-size: 0.85rem !important;
@@ -25,8 +35,25 @@ button {
   border-color: #005ca9;
 }
 
-.bg-orange {
-  background-color: #DC4943;
+.btn-light-primary {
+  background-color: #e1e9ff;
+  color: #005ca9;
+  border-color: #e1e9ff;
+}
+.btn-light-primary:hover, .btn-light-primary:focus, .btn-light-primary:active {
+  background-color: #005ca9;
+  border-color: #005ca9;
+  color: #FFF;
+}
+
+.btn-light-success {
+  background-color: #c3f4ce;
+  color: #28a745;
+  border-color: #c3f4ce;
+}
+.btn-light-success:hover, .btn-light-success:focus, .btn-light-success:active {
+  background-color: #28a745;
+  border-color: #28a745;
   color: #FFF;
 }
 
@@ -46,14 +73,6 @@ table tbody tr td span.bg-primary {
   background-color: #005ca9 !important;
 }
 
-aside a {
-  color: #3f4254 !important;
-  text-decoration: none;
-}
-aside a:hover {
-  color: #0d6efd !important;
-}
-
 .nav-item .active,
 a:active {
   color: white !important;
@@ -61,16 +80,7 @@ a:active {
 }
 .nav-item .active:hover,
 a:active:hover {
-  color: white !important;
-}
-
-/* Footer */
-footer div.container a.text-decoration-none {
-  color: black;
-  transition: 0.85s;
-}
-footer div.container a.text-decoration-none:hover {
-  color: #004d7c;
+  color: #FFF !important;
 }
 
 /*# sourceMappingURL=global.css.map */
