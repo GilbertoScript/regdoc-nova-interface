@@ -25,6 +25,15 @@ body {
   color: #FFF;
 }
 
+.bg-light-orange {
+  background-color: #f8dbd9;
+  color: #DC4943;
+}
+.bg-light-orange:hover {
+  background-color: #DC4943;
+  color: #FFF;
+}
+
 /* Botões */
 button {
   font-size: 0.85rem !important;

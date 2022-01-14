@@ -89,6 +89,8 @@ div#sub-header {
 
             .dropdown-item {
                 padding: 1rem;
+
+                &:active { background-color: #DC4943; }
             }
         }
 
