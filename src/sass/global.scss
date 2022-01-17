@@ -29,6 +29,13 @@ body {
     &:hover { background-color: #DC4943; color: #FFF; }
 }
 
+.bg-light-secondary {
+    background-color: lighten(#6c757d, 45%);
+    color: #6c757d;
+
+    &:hover { background-color: #6c757d; color: #FFF; }
+}
+
 /* Botões */
 button {
     font-size: .85rem !important;
