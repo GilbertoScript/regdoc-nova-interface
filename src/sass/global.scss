@@ -12,6 +12,11 @@ body {
     background-size: 100% 350px;
     font-family: 'Poppins', sans-serif;
     font-size: .835rem;
+
+    &.bg-login {
+        background-image: url('../../assets/img/regdoc-login.png');
+        background-size: cover;
+    }
 }
 
 .bg-orange {
@@ -20,6 +25,11 @@ body {
     transition: .9s;
 
     &:hover { background-color: darken(#DC4943, 20%); color: #FFF; }
+}
+
+.bg-grey {
+    background-color: #323232;
+    color: #FFF;
 }
 
 .bg-light-orange {
