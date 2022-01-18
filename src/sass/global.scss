@@ -16,6 +16,7 @@ body {
     &.bg-login {
         background-image: url('../../assets/img/regdoc-login.png');
         background-size: cover;
+        background-repeat: no-repeat;
     }
 }
 
@@ -103,3 +104,5 @@ a:active {
 
     &:hover { color: #FFF !important; }
 }
+
+.dropdown-item.active, .dropdown-item:active { background-color: #DC4943; }

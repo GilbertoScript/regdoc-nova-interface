@@ -1,3 +1,65 @@
+div.container-login-form {
+    height: calc(100vh - 139px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+
+    > div.row.transparent {
+        width: 88%;
+        height: 86%;
+        background: rgba(1, 1, 12, 0.5);
+        border-radius: 14px;
+
+        div.col-12.col-md-6 {
+
+            &:first-child {
+                margin-top: 85px;
+                padding-left: 57px;
+            }
+
+            &:last-child {
+                margin-top: 56px;
+            }
+
+            div {
+
+                &.line {
+                    border-right: 1px solid #FFF;
+                    height: 300px;
+                }
+
+                input {
+                    margin-top: 6px;
+                    border-radius: 12px;
+                    border: 0;
+                    padding: 8px;
+                    width: 90%;
+                }
+
+                button.access-button,
+                button.certification-button {
+                    margin-top: 40px;
+                    border: 0;
+                    border-radius: 31px;
+                    background-color: #DC4943;
+                    padding: 5px 32px;
+                    color: #FFF;
+                    transition: .5s;
+
+                    &:hover { background-color: darken(#DC4943, 25%); }
+                }
+
+                button.certification-button {
+                    padding: 7px 32px;
+                    margin-top: 11%;
+                    width: 90%;
+                }
+            }   
+        }
+    }
+}
+
 div.card-body.card-body-historico {
     border-bottom: 1rem solid #eaeaea;
     margin-bottom: 1rem;
@@ -258,7 +320,27 @@ footer {
     }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
+
+    div.container-login-form  {
+        height: auto;
+
+        > div.row.transparent {
+
+            div.col-12.col-md-6:first-child {
+                padding-left: 12px;
+            }
+
+            div.line {
+                border-right: 0 !important;
+                border-bottom: 1px solid #FFF;
+            }
+        }
+    }
+
+    footer.fixed-bottom {
+        position: initial;
+    }
 
     div.header-progresso {
         width: 100% !important;
